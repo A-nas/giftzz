@@ -121,7 +121,7 @@ $redcat=mysql_query($cat);
 									<?php $max="select max(PRIX) as PRIX from article" ; $redmax=mysql_query($max);?>
 									<?php $liremax= mysql_fetch_assoc($redmax)?>
 								 <input type="text" class="span2" value="250" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" name="prix" ><br />
-								 <b class="pull-left"><?php echo $liremin['PRIX']."DH";?></b> <b class="pull-right"><?php echo $liremax['PRIX']."DH";?></b>
+								 <b class="pull-left"><?php echo $liremin['PRIX']."€";?></b> <b class="pull-right"><?php echo $liremax['PRIX']."€";?></b>
 								 <br>
 								 <input class="btn btn-default add-to-cart" type="submit"  value="ok"/>
 							 </form>
@@ -160,7 +160,7 @@ $redcat=mysql_query($cat);
 								<p><b>Web ID: <?php echo $lire['COD_ARTICLE'];?></b></p><br>
 								<p><b>Nom de produit : </b><?php echo $lire['LIBELLE_ARTICLE'];?></p>
 								<span>
-									<span>Prix : <?php echo $lire['PRIX'];?> DH</span>
+									<span>Prix : <?php echo $lire['PRIX'];?> €</span>
 									<button type="button" class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
 										ajouter au panier

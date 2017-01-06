@@ -1,1 +1,1 @@
-sample e-commerce php project no framework.
+sample e-commerce php project (no framework).

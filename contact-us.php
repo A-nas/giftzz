@@ -209,10 +209,10 @@ if(isset($_POST['submit']))
 	    				<h2 class="title text-center">CONTACT</h2>
 	    				<address>
 	    					<p>Giftzz Inc.</p>
-							<p>935 AVENU HASSANE 2,IMM EL KAWTAR</p>
-							<p>RABAT MAROC</p>
-							<p>Mobile: 06 61 12 23 44</p>
-							<p>Fax:    05 37 69 83 12</p>
+							<p>Domaine Universitaire du Pont de Bois</p>
+							<p>59650 Villeneuve d'ascq</p>
+							<p>Mobile: 00 00 00 00 00</p>
+							<p>Fax:    00 00 00 00 00</p>
 							<p>Email: info@Giftzz.com</p>
 	    				</address>
 	    				<div class="social-networks">

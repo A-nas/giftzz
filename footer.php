@@ -51,7 +51,7 @@ echo
 					<div class="col-sm-3">
 						<div class="address">
 							<img src="images/home/map.png" alt="" />
-							<p>Premier site de cadeaux au Maroc</p>
+							<p>Premier site de cadeaux en France</p>
 						</div>
 					</div>
 				</div>

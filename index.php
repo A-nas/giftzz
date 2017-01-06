@@ -18,14 +18,13 @@ $redcat=mysql_query($cat);
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Aceuille | Giftzz</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css?v=1.1" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/price-range.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<script src="js/panier.js"></script>
-	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -101,11 +100,6 @@ $redcat=mysql_query($cat);
 						</ol>
 						<div class="carousel-inner">
 							<div class="item active">
-								<div class="col-sm-6">
-									<h1><span>G</span>iftzz</h1>
-									<h2></h2>
-									<p></p>
-									</div>
 									<div class="col-sm-6">
 									<img src="images/home/img2.png " class="girl img-responsive" alt="" />
 									
@@ -115,22 +109,11 @@ $redcat=mysql_query($cat);
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>G</span>iftzz</h1>
-									<h2></h2>
-									<p></p>
-								</div>
-								<div class="col-sm-6">
 									<img src="images/home/img1.jpg" class="girl img-responsive" alt="" />
 									
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>G</span>iftzz</h1>
-									<h2></h2>
-									<p></p>
-									
-								</div>
 								<div class="col-sm-6">
 									<img src="images/home/img1.png" class="girl img-responsive" alt="" />
 								
@@ -181,7 +164,7 @@ $redcat=mysql_query($cat);
 								<!--<input type="text" class="span2" value="250" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2"name="prix" ><br />-->
 
 								 <input type="text" class="span2" value="250" data-slider-min="<?php echo $liremin['PRIX'];?>" data-slider-max="<?php echo $liremax['PRIX'];?>" data-slider-step="5" data-slider-value="[250,450]" id="sl2"name="prix" ><br />
-								 <b class="pull-left"><?php echo $liremin['PRIX']."DH";?></b> <b class="pull-right"><?php echo $liremax['PRIX']."DH";?></b>
+								 <b class="pull-left"><?php echo $liremin['PRIX']."€";?></b> <b class="pull-right"><?php echo $liremax['PRIX']."€";?></b>
 								 <br>
 								 <input class="btn btn-default add-to-cart" type="submit"  value="ok"/>
 								  </form>
@@ -199,7 +182,7 @@ $redcat=mysql_query($cat);
 							<div class="single-products">
 								<div class="productinfo text-center">
 									<img src="images/shop/<?php echo $lire['IMAGE'];?>"	 />
-									<h2><?php echo $lire['PRIX']."DH";?></h2>
+									<h2><?php echo $lire['PRIX']."€";?></h2>
                                     <p><?php echo $lire['LIBELLE_ARTICLE'];?></p>									
 									<a href="product-details.php?COD_ARTICLE=<?php echo $lire['COD_ARTICLE'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shoppingcart"></i>afficher detail</a>
 				                </div>

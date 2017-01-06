@@ -103,7 +103,7 @@ if(isset($_POST['registration']))
 			   //$_SESSION['id']=$_POST['username']; faire au moment de l'activation
 			   //header("Location: Bienvenu.php"); ***
 			   
-			   }else echo $message = "il ya une erreur lors de l'enregistrement veuillez ressayer ulterierement";			   
+			   }else echo $message = "il ya une erreur lors de l'enregistrement veuillez ressayer ulterierement";	// a adapter le code n'est pas lisible :@		   
 		   }
 		   
 	   }else  $message = "une erreur est survenue lors de l'enregistrement ?!!";

@@ -22,12 +22,12 @@ if(isset($_SESSION['cart']))
 		$som += $a->PRIX;
 		$total=$som;
 	}
-	echo'<li><a href="panier-details.php"><i class="fa fa-crosshairs"></i> '.count($_SESSION['cart']).' Produit(s) Total est : '.$som.' DH </a></li>';
+	echo'<li><a href="panier-details.php"><i class="fa fa-crosshairs"></i> '.count($_SESSION['cart']).' Produit(s) Total est : '.$som.' € </a></li>';
 	
     }
 	else
 	{
-	echo'<li><a href="panier-details.php"><i class="fa fa-crosshairs"></i> 0 Produit(s) Total est : 0 DH </a></li>';	
+	echo'<li><a href="panier-details.php"><i class="fa fa-crosshairs"></i> 0 Produit(s) Total est : 0 € </a></li>';	
 	}
 }
 if($action == "getcommand")
@@ -47,7 +47,7 @@ if($action == "getcommand")
 								<p>Web ID:'.$a->COD_ARTICLE.'</p>
 							</td>
 							<td class="cart_price">
-								<p>'.$a->PRIX.' DH</p>
+								<p>'.$a->PRIX.' €</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
@@ -57,7 +57,7 @@ if($action == "getcommand")
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">'.$a->PRIX*$v.' DH</p>
+								<p class="cart_total_price">'.$a->PRIX*$v.' €</p>
 							</td>
 							<td class="cart_delete">
 								<a onclick="deleteart('.$k.') ; return false" ;class=cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
@@ -73,7 +73,7 @@ if($action == "getcommand")
 	}
 echo'<tr class="table table-condensed total-result"><td><h3>
 	<form action="indexpaypal.php" method="POST">
-	Total : '.$p.' DH </br></br>
+	Total : '.$p.' € </br></br>
 	&nbsp&nbsp&nbsp&nbsp&nbsp
 	<input type="hidden" name="prix" value='.$p.' />
 	<input type="hidden" name="qte" value='.$q.' />
