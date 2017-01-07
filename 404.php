@@ -30,8 +30,8 @@
 			<a href="index.php?page=1"><img src="images/home/logo.png" alt="" /></a>
 		</div>
 		<div class="content-404">
-			<img src="images/404/404.png" class="img-responsive" alt="" />
-			<h1><b>OPPS!</b> Vous ne pouvais pas trouver cette page</h1>
+			<img src="images/404/404.png" class="Noimg-responsive" alt="" />
+			<h1><b>OPPS!</b> La Page que vous demandez n'existe pas !</h1>
 			<h2><a href="index.php?page=1">Retour à l'Accueil</a></h2>
 		</div>
 	</div>
