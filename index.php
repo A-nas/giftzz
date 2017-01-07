@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 require_once'connect.php';
-if(!isset($_GET['page'])){$_GET['page']=1;}
+if(!isset($_GET['page'])){$_GET['page']=1;} // cas de 0 parametre pour eviter une erreur d'ont je me souviens pas 
 $page=$_GET['page'];
 $n=$page+1;
 if($page=="" || $page =="1")

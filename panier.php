@@ -5,36 +5,34 @@ $p=0;
 $q=0;
 $a=Objet::instance("article");
 extract($_POST);
-if($action == "addpanier")
+
+
+if($action == "addpanier") // ajouter article 1 by 1
 {
 	$_SESSION['cart'][]=$id;
-	echo "oui";	
+	//echo "article ajouté";	
 }
-if($action == "getpanier")
-{
-if(isset($_SESSION['cart']))
-{
-	$som=0;
-	foreach($_SESSION['cart'] as $k=>$v)
-	{
-		$a->COD_ARTICLE=$v;
-		$a->find_one();
-		$som += $a->PRIX;
-		$total=$som;
-	}
-	echo'<li><a href="panier-details.php"><i class="fa fa-crosshairs"></i> '.count($_SESSION['cart']).' Produit(s) Total est : '.$som.' € </a></li>';
-	
-    }
-	else
-	{
-	echo'<li><a href="panier-details.php"><i class="fa fa-crosshairs"></i> 0 Produit(s) Total est : 0 € </a></li>';	
-	}
-}
-if($action == "getcommand")
-{
+
+
+if($action == "getpanier"){
 	if(isset($_SESSION['cart'])){
-		foreach(countproduct($_SESSION['cart'])as $k=>$v)
+		$som=0;
+		foreach($_SESSION['cart'] as $k=>$v)
 		{
+			$a->COD_ARTICLE=$v;
+			$a->find_one();
+			$som += $a->PRIX;
+			$total=$som;
+		}
+	echo'<li><a href="panier-details.php"><i class="fa fa-crosshairs"></i> '.count($_SESSION['cart']).' Produit(s) Total est : '.$som.' € </a></li>';
+	}else echo'<li><a href="panier-details.php"><i class="fa fa-crosshairs"></i> 0 Produit(s) Total est : 0 € </a></li>';
+}
+
+
+if($action == "getcommand"){ // affichage du panier (a modifier)
+	if(isset($_SESSION['cart'])){
+		foreach(countproduct($_SESSION['cart'])as $k=>$v){
+			
 			$a->COD_ARTICLE=$k;
 			$a->find_one();
 		    echo'<tr>
@@ -62,7 +60,8 @@ if($action == "getcommand")
 							<td class="cart_delete">
 								<a onclick="deleteart('.$k.') ; return false" ;class=cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
 							</td>
-				</tr>';		
+				</tr>';
+				
 				$p=$p+($a->PRIX*$v);
 				$q=$q+$v;
 				$newqte=0;
@@ -80,7 +79,9 @@ echo'<tr class="table table-condensed total-result"><td><h3>
 	<input type="submit" class="btn btn-default" name="ok" value="Acheter" >
 	</form></h3></td></tr>';
 }
-if($action=="deleteart"){
+
+
+if($action=="deleteart"){ //effacer la session du pannier
 	foreach($_SESSION['cart'] as $v => $c){
 		if($id==$c){
 			unset($_SESSION['cart'][$v]);

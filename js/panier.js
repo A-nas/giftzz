@@ -1,5 +1,5 @@
 var url ="panier.php";
-var timer = setInterval(getpanier,500);
+var timer = setInterval(getpanier,500); // set getcommand timer intervel to 0.05 sec
 var timer = setInterval(getcommand,500);
 $(function(){
 	$(".cart").click(function(){
@@ -7,9 +7,9 @@ $(function(){
 		$.post(url,{action:"addpanier",id:id},function(data){
 			if(data == "oui"){
 				getpanier();
-                 alert("un produit a ete ajouter au panier ");
 			}else{
-				alert(data);
+				//alert(data);
+				//echo($_SESSION['cart'][]);
 			}
 		});
 		return false;
@@ -27,6 +27,7 @@ function getcommand()
 {
 	$.post(url,{action:"getcommand"},function(data){
 		$(".panier").empty().append(data);
+		//alert(data);
 	});
 	return false;
 }
