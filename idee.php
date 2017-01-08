@@ -2,7 +2,7 @@
 <?php
 require_once'connect.php';
 $art=$_SESSION['rech'];
-echo $art;
+//echo $art;
 $val=0;
 $redart=mysql_query($art);
 $val=mysql_num_rows($redart);
