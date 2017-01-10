@@ -60,7 +60,7 @@ echo
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright 2015 E-Giftzz : Tous les Droits sont Reserver.</p>
+					<p class="pull-left">Copyright 2017 E-Giftzz : Tous les Droits sont Reserver.</p>
 				</div>
 			</div>
 		</div>
